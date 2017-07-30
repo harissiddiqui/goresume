@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GoResume</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/resume.js"></script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1><span>GoResume</span>Create Your Resume</h1>
+    </header>
+      <div  class="form">
+
+                <p class="contact"><label>Select Template</label></p>
+
+                    <!--<p class="contact"><label>Provide Academic Details</label></p>                    &lt;!&ndash; Trigger the modal with a button &ndash;&gt;-->
+                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#tempSelectModal" style="position: relative; float: right; margin-right: 10%">Templates</button><br><br>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="tempSelectModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content" style="width: auto">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Templates</h4>
+                                </div>
+                                <div class="modal-body" style="background-color: #F1F1F1">
+                                    <div class="form-group">
+
+                                        <div style="float: left">
+                                            <img src="images/1.png" id="tmp1" style="width: 256px;height: 335.75px; padding: 2%"><br>
+                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/1.html')">Select Template</button>
+                                        </div>
+
+                                        <div style="float: right">
+                                            <img src="images/2.png" id="tmp2" style="width: 256px;height: 335.75px; padding: 2%"><br>
+                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/2.html')">Select Template</button>
+                                        </div>
+
+                                        <div style="float: left">
+                                            <img src="images/3.png" id="tmp3" style="width: 256px;height: 335.75px; padding: 2%"><br>
+                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/3.html')">Select Template</button>
+                                        </div>
+
+                                        <div style="float: right">
+                                            <img src="images/4.png" id="tmp4" style="width: 256px;height: 335.75px; padding: 2%"><br>
+                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/4.html')">Select Template</button>
+                                        </div>
+
+                                        <div style="float: left">
+                                            <img src="images/5.png" id="tmp5" style="width: 256px;height: 335.75px; padding: 2%"><br>
+                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/5.html')">Select Template</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer"></div>
+                                </div>
+
+                            </div> <!-- modal-content -->
+
+                        </div> <!-- modal-dialog -->
+                    </div>
+
+
+          <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
+    			<p class="contact"><label for="name">Full Name</label></p>
+    			<input id="name" name="name" placeholder="First and last name"  type="text">
+
+    			<p class="contact"><label for="email">Email Address</label></p>
+    			<input id="email" name="email" placeholder="example@domain.com"  type="email">
+                
+                <p class="contact"><label for="phone">Phone No.</label></p> 
+    			<input id="phone" name="phone" placeholder="Phone No"  type="text">
+    			 
+                <p class="contact"><label for="address">Address</label></p>
+    			<input type="text" id="address" name="address" placeholder="Address" >
+
+                <!--<p class="contact"><label for="details">Provide Academic Details</label></p>-->
+    			<!--<input type="text" id="details" name="details" placeholder="Academic Details" >-->
+          <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
+                <p class="contact"><label>Mention relevant qualifications</label></p>
+
+                    <!--<p class="contact"><label>Provide Academic Details</label></p>                    &lt;!&ndash; Trigger the modal with a button &ndash;&gt;-->
+                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#qualModal" style="position: relative; float: right; margin-right: 10%">Qualifications Summary</button><br><br>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="qualModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Summary of Qualifications</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group" id="qualInput">
+
+                                        <label for="qual">Add relevant Qualifications</label><br><br>
+                                        <input class="form-control inputName" id="qual" type="text" placeholder="Photoshop, MVC, .net, node.js etc..">
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+
+                                    <button type="button" class="btn btn-primary" onclick="addQual()">Save Changes</button>
+
+                                </div>
+                            </div> <!-- modal-content -->
+
+                        </div> <!-- modal-dialog -->
+                    </div>
+
+
+
+
+          <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
+                <p class="contact"><label>Provide Academic Details</label></p>
+
+                    <!--<p class="contact"><label>Provide Academic Details</label></p>                    &lt;!&ndash; Trigger the modal with a button &ndash;&gt;-->
+                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#eduModal" style="position: relative; float: right; margin-right: 10%">Educational Details</button><br><br>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="eduModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Educational Details</h4>
+                                </div>
+                                <div class="modal-body">
+                                   <div class="form-group" id="eduInput">
+                                       <label for="eduDegree">Degree</label><br><br>
+                                       <input class="form-control inputName" id="eduDegree" type="text">
+
+                                       <label for="eduSchool">Institute</label><br><br>
+                                       <input class="form-control inputSchool" id="eduSchool" type="text">
+
+                                       <label for="eduGraduationDate">Graduated In</label><br><br>
+                                       <input type="number" id="eduGraduationDate" min="1900" max="2099" step="1" value="2016" />
+                                   </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" onclick="addEdu()">Save Changes</button>
+
+                                </div>
+                            </div> <!-- modal-content -->
+
+                        </div> <!-- modal-dialog -->
+                    </div>
+
+
+
+          <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
+                <p class="contact"><label>Provide Work Details</label></p>
+
+                    <!--<p class="contact"><label>Provide Academic Details</label></p>                    &lt;!&ndash; Trigger the modal with a button &ndash;&gt;-->
+                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#workModal" style="position: relative; float: right; margin-right: 10%">Work Details</button><br><br>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="workModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Work Details</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group" id="workInput">
+                                        <label for="workPosition">Position</label><br><br>
+                                        <input class="form-control inputName" id="workPosition" type="text">
+
+                                        <label for="workOrg">Company or Organization</label><br><br>
+                                        <input class="form-control inputSchool" id="workOrg" type="text">
+
+                                        <label for="workDurationStart">Started</label><br><br>
+                                        <input type="number" id="workDurationStart" min="1900" max="2099" step="1" value="2016" />
+
+                                        <label for="workDurationEnd">Ended</label><br><br>
+                                        <input type="number" id="workDurationEnd" min="1900" max="2099" step="1" value="2016" />
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" onclick="addWork()">Save Changes</button>
+                                </div>
+                            </div> <!-- modal-content -->
+
+                        </div> <!-- modal-dialog -->
+                    </div>
+
+
+
+          <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
+                <p class="contact"><label>Mention your personal skills</label></p>
+
+                    <!--<p class="contact"><label>Provide Academic Details</label></p>                    &lt;!&ndash; Trigger the modal with a button &ndash;&gt;-->
+                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#pSkillsModal" style="position: relative; float: right; margin-right: 10%">Personal Skills</button><br><br>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="pSkillsModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Personal Skills</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group" id="pSkillInput">
+
+                                        <label for="pSkill">Add your Personal Skills</label><br><br>
+                                        <input class="form-control inputName" id="pSkill" type="text" placeholder="Project Management, business strategies etc..">
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" onclick="addPSkill()">Save Changes</button>
+                                </div>
+                            </div> <!-- modal-content -->
+
+                        </div> <!-- modal-dialog -->
+                    </div>
+
+
+          <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
+          <p class="contact"><label>Mention your Technical skills</label></p>
+
+                    <!--<p class="contact"><label>Provide Academic Details</label></p>                    &lt;!&ndash; Trigger the modal with a button &ndash;&gt;-->
+                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#tSkillsModal" style="position: relative; float: right; margin-right: 10%">Technical Skills</button><br><br>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="tSkillsModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Technical Skills</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group" id="tSkillInput">
+
+                                        <label for="tSkill">Add your Technical Skills</label><br><br>
+                                        <input class="form-control inputName" id="tSkill" type="text" placeholder="Photoshop, MVC, .net, node.js etc..">
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+
+                                    <button type="button" class="btn btn-primary" onclick="addTSkill()">Save Changes</button>
+
+                                </div>
+                            </div> <!-- modal-content -->
+
+                        </div> <!-- modal-dialog -->
+                    </div>
+
+
+          <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
+                <button class="buttom" onclick="save_data()" type="button" style="position: relative; float: right; margin-right: 10%">Save and Display Data</button><br><br>
+
+</div>
+</div>
+
+</body>
+</html>

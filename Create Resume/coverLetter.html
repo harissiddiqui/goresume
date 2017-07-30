@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/coverLetter.js"></script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1><span>Go Resume</span>Create Your Cover Letter</h1>
+    </header>
+    <div class="form">
+        <p class="contact"><label for="name">Full Name</label></p>
+        <input id="name" name="name" placeholder="First and last name"  type="text">
+
+        <p class="contact"><label for="email">Email Address</label></p>
+        <input id="email" name="email" placeholder="example@domain.com"  type="email">
+
+        <p class="contact"><label for="phone">Phone No.</label></p>
+        <input id="phone" name="phone" placeholder="Phone No"  type="text">
+
+        <p class="contact"><label for="address">Address</label></p>
+        <input type="text" id="address" name="address" placeholder="Address" >
+        <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
+<div>
+        <label for="date">Date</label>
+        <input type="date" id="date" name="address" placeholder="Address" >
+</div>
+        <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
+        <div class="form-group">
+            <label for="sel1">Title</label>
+            <select class="form-control" id="sel1" style="width: auto">
+                <option>To whom it may concern</option>
+                <option>Dear Sir</option>
+                <option>Dear Madam</option>
+                <option>Dear Mr.</option>
+                <option>Dear Ms.</option>
+            </select>
+        </div>
+
+        <p class="contact"><label for="cName">Concerned Person's Last Name</label></p>
+        <input type="text" id="cName" name="address" placeholder="Last Name" >
+
+        <p class="contact"><label for="cTitle">Concerned Person's Professional Title</label></p>
+        <input type="text" id="cTitle" name="address" placeholder="Professional Title" >
+
+        <p class="contact"><label for="cOrg">Concerned Organization's Name</label></p>
+        <input type="text" id="cOrg" name="address" placeholder="Organization Name" >
+
+        <p class="contact"><label for="cAddress">Concerned Organization's Address</label></p>
+        <input type="text" id="cAddress" name="address" placeholder="Organization's Address" >
+        <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
+
+        <div class="form-group">
+            <label for="cStart">Opening Statement</label>
+            <textarea class="form-control" rows="3" style="width: 400px" id="cStart"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="cMid">Middle Section</label>
+            <textarea class="form-control" rows="5" style="width: 400px" id="cMid"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="cEnd">Ending Statement</label>
+            <textarea class="form-control" rows="3" style="width: 400px" id="cEnd"></textarea>
+        </div>
+        <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
+
+        <div class="form-group">
+            <label for="sel2">Valediction</label>
+            <select class="form-control" id="sel2" style="width: auto">
+                <option>Yours Respectfully</option>
+                <option>Yours Truly</option>
+                <option>Yours Sincerely</option>
+            </select>
+        </div>
+        <button class="buttom" onclick="save_data_cl()" type="button" style="position: relative; float: right; margin-right: 10%">Save and Display Data</button><br><br>
+    </div>
+
+</div>
+</body>
+</html>
