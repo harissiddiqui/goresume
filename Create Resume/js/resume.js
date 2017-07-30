@@ -117,9 +117,22 @@ function addQual() {
 }
 
 function selectTmp(template) {
+
     window.teeemp = template;
+
 }
 
+function snackbar(val) {
+    var x = document.getElementById(val);
+    x.className = "show";
+    console.log("asdawwqweqwe");
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+function createCoverLetter() {
+    window.open("localhost://3000", "_self");
+
+}
 
 function save_data(){
     localStorage.setItem("sName", document.getElementById("name").value);

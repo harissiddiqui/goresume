@@ -7,16 +7,41 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <link rel="stylesheet" type="text/css" href="style.css" media="all" />
     <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/snackbar.css" media="all" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/resume.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+
+
 </head>
+
 <body>
 <div class="container">
     <header>
-        <h1><span>GoResume</span>Create Your Resume</h1>
+        <nav class="navbar navbar-inverse">
+            <div class="container" style="font-family:Sansation Light">
+                <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">⚡Go Resume</a>
+
+                </div>
+                <a class="btn btn-success navbar-btn navbar-right" role="button"<base href="http://localhost:3000" target="_blank" />Explore Jobs</a>
+                <a class="btn btn-primary navbar-btn navbar-right" role="button"  href="coverLetter.html" target="_blank">Cover Letter</a>
+
+               </div>
+        </nav><hr style="border: 1px solid #A2AEBB; width: 100%" />​
+        <h1>Create Your Resume</h1>
+
     </header>
+
+
+
       <div  class="form">
 
                 <p class="contact"><label>Select Template</label></p>
@@ -39,27 +64,32 @@
 
                                         <div style="float: left">
                                             <img src="images/1.png" id="tmp1" style="width: 256px;height: 335.75px; padding: 2%"><br>
-                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/1.html')">Select Template</button>
+                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/1.html'); snackbar('snackbar1')">Select Template</button>
+                                            <div id="snackbar1">Template Selected</div>
                                         </div>
 
                                         <div style="float: right">
                                             <img src="images/2.png" id="tmp2" style="width: 256px;height: 335.75px; padding: 2%"><br>
-                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/2.html')">Select Template</button>
+                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/2.html'); snackbar('snackbar2')">Select Template</button>
+                                            <div id="snackbar2">Template Selected</div>
                                         </div>
 
                                         <div style="float: left">
                                             <img src="images/3.png" id="tmp3" style="width: 256px;height: 335.75px; padding: 2%"><br>
-                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/3.html')">Select Template</button>
+                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/3.html'); snackbar('snackbar3')">Select Template</button>
+                                            <div id="snackbar3">Template Selected</div>
                                         </div>
 
                                         <div style="float: right">
                                             <img src="images/4.png" id="tmp4" style="width: 256px;height: 335.75px; padding: 2%"><br>
-                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/4.html')">Select Template</button>
+                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/4.html'); snackbar('snackbar4')">Select Template</button>
+                                            <div id="snackbar4">Template Selected</div>
                                         </div>
 
                                         <div style="float: left">
                                             <img src="images/5.png" id="tmp5" style="width: 256px;height: 335.75px; padding: 2%"><br>
-                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/5.html')">Select Template</button>
+                                            <button type="button" class="btn btn-primary" onclick="selectTmp('templates/5.html'); snackbar('snackbar5')">Select Template</button>
+                                            <div id="snackbar5">Template Selected</div>
                                         </div>
 
                                     </div>
@@ -113,7 +143,8 @@
                                 </div>
                                 <div class="modal-footer">
 
-                                    <button type="button" class="btn btn-primary" onclick="addQual()">Save Changes</button>
+                                    <button type="button" class="btn btn-primary" onclick="addQual(); snackbar('snackbar6')">Save Changes</button>
+                                    <div id="snackbar6">Qualification Added</div>
 
                                 </div>
                             </div> <!-- modal-content -->
@@ -153,7 +184,8 @@
                                    </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" onclick="addEdu()">Save Changes</button>
+                                    <button type="button" class="btn btn-primary" onclick="addEdu(); snackbar('snackbar7')">Save Changes</button>
+                                    <div id="snackbar7">Education Added</div>
 
                                 </div>
                             </div> <!-- modal-content -->
@@ -195,7 +227,8 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" onclick="addWork()">Save Changes</button>
+                                    <button type="button" class="btn btn-primary" onclick="addWork(); snackbar('snackbar8')">Save Changes</button>
+                                    <div id="snackbar8">Work Added</div>
                                 </div>
                             </div> <!-- modal-content -->
 
@@ -229,7 +262,8 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" onclick="addPSkill()">Save Changes</button>
+                                    <button type="button" class="btn btn-primary" onclick="addPSkill(); snackbar('snackbar9')">Save Changes</button>
+                                    <div id="snackbar9">Skill Added</div>
                                 </div>
                             </div> <!-- modal-content -->
 
@@ -263,7 +297,8 @@
                                 </div>
                                 <div class="modal-footer">
 
-                                    <button type="button" class="btn btn-primary" onclick="addTSkill()">Save Changes</button>
+                                    <button type="button" class="btn btn-primary" onclick="addTSkill(); snackbar('snackbar10')">Save Changes</button>
+                                    <div id="snackbar10">Skill Added</div>
 
                                 </div>
                             </div> <!-- modal-content -->
@@ -276,7 +311,20 @@
                 <button class="buttom" onclick="save_data()" type="button" style="position: relative; float: right; margin-right: 10%">Save and Display Data</button><br><br>
 
 </div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5>Go Resume© 2017</h5>
+                </div>
+                <div class="col-sm-6 social-icons"><a href="https://www.facebook.com/Go-Resume-1813690295611919/" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+            </div>
+        </div>
+    </footer>
 </div>
+
+
 
 </body>
 </html>
