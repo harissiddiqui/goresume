@@ -135,7 +135,7 @@ section.testimonials{
 }
 
 .site-footer .social-icons a{
-  display:inline-block;
+  /*display:inline-block;*/
   width:32px;
   border:none;
   font-size:20px;

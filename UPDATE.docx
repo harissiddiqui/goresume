@@ -1,0 +1,15 @@
+Takes input from index.html and displays on output.html.
+
+Added functionality to store date of birth.
+
+Functionality to take in educatonal details and display on template.
+
+Functionality to take in work experience, skills and display on template.
+
+Seperated skills into personal and technical subtypes.
+
+Seperated the javascript for better understanding and minimizing complexity.
+
+Addin new professional templates.
+
+Added modal for template selection.

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../js/getcl.js"></script>
+    <script src="../js/jspdf.min.js"></script>
+    <script src="../js/html2canvas.min.js"></script>
+    <script src="../js/html2pdf.js"></script>
+</head>
+<body>
+<div id="content">
+<script type="text/javascript">
+    document.write("<h1>" + ggName + "</h1><h4>" + ggAddress + "<br>" + ggPhone + "<br>" + ggEmail + "</h4>");
+</script>
+
+<script type="text/javascript">
+    document.write("<h5>" + ggDate + "</h5>");
+</script>
+
+<script type="text/javascript">
+    document.write("<h2>" + ggcName + "</h2><h4>" + ggcTitle + "<br>" + ggcOrg + "<br>" + ggcAddress + "</h4><p>" + ggSel1 +",</p>");
+</script>
+
+<script type="text/javascript">
+    document.write("<p>" + "    " + ggStart + "<br><br>" + "    " + ggMid + "<br><br>" + "    " + ggEnd + "</p>");
+</script>
+
+<script type="text/javascript">
+    document.write("<h4>" + ggSel2 + "," + "<br>" + ggName + "</h4>");
+</script>
+
+</div>
+<div id="editor"></div>
+<button onclick="convert2pdf()" id="cmd">generate PDF</button>
+<script type="text/javascript">
+    function convert2pdf() {
+        var element = document.getElementById("content");
+        html2pdf(element, {margin: 5});
+    }
+</script>
+</body>
+</html>

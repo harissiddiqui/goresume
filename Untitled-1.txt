@@ -1,0 +1,3 @@
+ion-android-document
+<a class="navbar-brand page-scroll" href="#first"><i class="ion-ios-analytics-outline"></i> Go Resume</a>
+https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg
