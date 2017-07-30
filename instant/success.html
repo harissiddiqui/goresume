@@ -47,7 +47,7 @@
                     user.getToken().then(function (accessToken) {
                         document.getElementById('sign-in-status').textContent = 'Signed in';
                         document.getElementById('sign-in').textContent = 'Sign out';
-                        document.getElementById('account-details').textContent = JSON.stringify({
+                        var data = {
                             displayName: displayName,
                             email: email,
                             emailVerified: emailVerified,
@@ -56,9 +56,11 @@
                             uid: uid,
                             accessToken: accessToken,
                             providerData: providerData
-                        }, null, '  ');
-                                localStorage.setItem("username", displayName);
-                                localStorage.setItem("email", email);
+                            };
+                        document.getElementById('account-details').textContent = JSON.stringify(data, null, '  ');
+                                localStorage.setItem("username", data.displayName);
+                                localStorage.setItem("email", data.email);
+                                localStorage.setItem("uid", data.uid);
                                 // localStorage.setItem("username", uid);
                     });
                 } else {
@@ -110,12 +112,13 @@
           <h4 class="modal-title">User Details</h4>
         </div>
         <div class="modal-body">
-            <div id="sign-in-status"></div>
-             <div id="sign-in"></div>       
+            <!--<div id="sign-in-status"></div>
+             <div id="sign-in"></div>-->       
              <div id="account-details"></div>
             <script>
-            document.write("<h1>" + localStorage.getItem("username") + "</h1>");
-            document.write("<h3>" + localStorage.getItem("email") + "</h3>");
+            document.write("<h1> Name: " + localStorage.getItem("username") + "</h1>");
+            document.write("<h3> Email: " + localStorage.getItem("email") + "</h3>");
+            document.write("<h3> ID: " + localStorage.getItem("uid") + "</h3>");
             // document.write("<h3>" + localStorage.getItem("uid") + "</h3>");
         </script>
          <!--<div id="firebaseui-auth-container"></div>-->
@@ -133,9 +136,9 @@
   
 </div>
   
-    <div id="sign-in-status"></div>
+    <!--<div id="sign-in-status"></div>
     <div id="sign-in"></div>
-    <div id="account-details"></div>
+    <div id="account-details"></div>-->
     <div class="jumbotron hero" style="font-family:Sansation Light">
         <div class="container">
             <div class="row">
