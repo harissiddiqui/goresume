@@ -5,6 +5,13 @@
 	<script src="../js/jspdf.min.js"></script>
 	<script src="../js/html2canvas.min.js"></script>
 	<script src="../js/html2pdf.js"></script>
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
 	<title>Resume | First Last</title>
 	<meta name="robots" content="noindex, nofollow">
 	<style type="text/css" media="all">
@@ -87,6 +94,53 @@
 	<script type="text/javascript" src="../js/getData.js"></script>
 </head>
 <body>
+	<script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '149837395588304',
+                xfbml: true,
+                version: 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+            FB.login(function (response) {
+                if (response.authResponse) {
+                    console.log('Welcome!  Fetching your information.... ');
+                    FB.api('/me', function (response) {
+                        console.log('Good to see you, ' + response.name + '.');
+                        console.log(response)
+                    });
+                } else {
+                    console.log('User cancelled login or did not fully authorize.');
+                }
+            });
+        };
+        //   (function(d, s, id){
+        //      var js, fjs = d.getElementsByTagName(s)[0];
+        //      if (d.getElementById(id)) {return;}
+        //      js = d.createElement(s); js.id = id;
+        //      js.src = "//connect.facebook.net/en_US/sdk.js";
+        //      fjs.parentNode.insertBefore(js, fjs);
+        //    }(document, 'script', 'facebook-jssdk'));
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk')
+        );
+    </script>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=149837395588304";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
 <div id="resume3">
 	<script type="text/javascript">
     	document.write("<h1>" + gName + "</h1>");
@@ -187,5 +241,13 @@
             html2pdf(element, {margin: 5});
         }
 	</script>
+	 <div style="float:right"
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+<!--<div class="fb-share-button" data-href="https://www.facebook.com/goresume1" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhttps%2Fwww.facebook.com%2Fgoresume1&amp;src=sdkpreparse">Share</a></div>-->
+<a class="buttom" type="button"  role="button" href="mailto:companyname@example.com?subject=hello" target="_blank" />Send Mail</a>
 
 </body></html>
