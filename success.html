@@ -45,8 +45,8 @@
                     var phoneNumber = user.phoneNumber;
                     var providerData = user.providerData;
                     user.getToken().then(function (accessToken) {
-                        document.getElementById('sign-in-status').textContent = 'Signed in';
-                        document.getElementById('sign-in').textContent = 'Sign out';
+                        // document.getElementById('sign-in-status').textContent = 'Signed in';
+                        // document.getElementById('sign-in').textContent = 'Sign out';
                         var data = {
                             displayName: displayName,
                             email: email,
@@ -119,6 +119,7 @@
             document.write("<h1> Name: " + localStorage.getItem("username") + "</h1>");
             document.write("<h3> Email: " + localStorage.getItem("email") + "</h3>");
             document.write("<h3> ID: " + localStorage.getItem("uid") + "</h3>");
+            document.write("asdasdasd");
             // document.write("<h3>" + localStorage.getItem("uid") + "</h3>");
         </script>
          <!--<div id="firebaseui-auth-container"></div>-->
