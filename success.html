@@ -31,7 +31,16 @@
         firebase.initializeApp(config);
     </script>
 
-
+    <script> 
+    // window.reload(); 
+    // location.reload();
+    window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+    </script>
     <script type="text/javascript">
         initApp = function () {
             firebase.auth().onAuthStateChanged(function (user) {
@@ -57,10 +66,13 @@
                             accessToken: accessToken,
                             providerData: providerData
                             };
-                        document.getElementById('account-details').textContent = JSON.stringify(data, null, '  ');
-                                localStorage.setItem("username", data.displayName);
+                            console.log(data);
+                            console.log(data.displayName)
+                         localStorage.setItem("username", data.displayName);
                                 localStorage.setItem("email", data.email);
                                 localStorage.setItem("uid", data.uid);
+                               
+                        document.getElementById('account-details').textContent = JSON.stringify(data, null, '  ');
                                 // localStorage.setItem("username", uid);
                     });
                 } else {
@@ -119,7 +131,7 @@
             document.write("<h1> Name: " + localStorage.getItem("username") + "</h1>");
             document.write("<h3> Email: " + localStorage.getItem("email") + "</h3>");
             document.write("<h3> ID: " + localStorage.getItem("uid") + "</h3>");
-            // document.write("asdasdasd");
+            //document.write("asdasdasd");
             // document.write("<h3>" + localStorage.getItem("uid") + "</h3>");
         </script>
          <!--<div id="firebaseui-auth-container"></div>-->
@@ -127,7 +139,7 @@
                 data-auto-logout-link="false" data-use-continue-as="false"></div>-->
         </div>
         <div class="modal-footer">
-            <a  type="button" class="btn btn-default" href="https://harissiddiqui.github.io/goresume"><center>Sign Out</center></a>
+            <a  type="button" class="btn btn-default" onclick="logout()" href="index.html"><center>Sign Out</center></a>
           <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
         </div>
       </div>
@@ -199,6 +211,24 @@
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script> 
+    
+    function logout()
+    {
+firebase.auth().signOut().then(function() {
+  console.log('Signed Out');
+}, function(error) {
+  console.error('Sign Out Error', error);
+});
+localStorage.setItem("username","");
+localStorage.setItem("email","");
+
+localStorage.setItem("uid","");
+console.log('heyyy')
+            // document.write("<h1> Name: " + localStorage.getItem("username") + "</h1>");
+            // document.write("<h3> Email: " + localStorage.getItem("email") + "</h3>");
+            // document.write("<h3> ID: " + localStorage.getItem("uid") + "</h3>");
+    }</script>
     
 </body>
 
