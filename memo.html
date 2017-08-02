@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/coverLetter.js"></script>
+    <script type="text/javascript" src="js/memo.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/user.css">
 </head>
+<body>
 <header>
 
     <nav class="navbar">
@@ -34,60 +35,41 @@
 
 
 </header>
-<body>
 <div class="container">
-<header>
+    <header>
         <ul class="pagination">
 
             <li><a href="builder.html">Create Resume</a></li>
-            <li class="active"><a href="coverLetter.html">Create Cover Letter</a></li>
-            <li><a href="memo.html">Create Memo</a></li>
+            <li><a href="coverLetter.html">Create Cover Letter</a></li>
+            <li class="active"><a href="memo.html">Create Memo</a></li>
 
         </ul>​
-        <h1>Create Your Cover Letter</h1>
+        <h1>Create a Memorandum</h1>
 
     </header>
+
     <div class="form">
-        <p class="contact"><label for="name">Full Name</label></p>
-        <input id="name" name="name" placeholder="First and last name"  type="text">
+        <p class="contact"><label for="name">Your Full Name</label></p>
+        <input id="name" name="name" placeholder="Full Name"  type="text">
 
-        <p class="contact"><label for="email">Email Address</label></p>
-        <input id="email" name="email" placeholder="example@domain.com"  type="email">
+        <p class="contact"><label for="title">Your Professional Title</label></p>
+        <input type="text" id="title" name="address" placeholder="Professional Title" >
 
-        <p class="contact"><label for="phone">Phone No.</label></p>
-        <input id="phone" name="phone" placeholder="Phone No"  type="text">
-
-        <p class="contact"><label for="address">Address</label></p>
-        <input type="text" id="address" name="address" placeholder="Address" >
         <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
-<div>
-        <label for="date">Date</label>
-        <input type="date" id="date" name="address" placeholder="Address" >
-</div>
-        <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
-        <div class="form-group">
-            <label for="sel1">Title</label>
-            <select class="form-control" id="sel1" style="width: auto">
-                <option>To whom it may concern</option>
-                <option>Dear Sir</option>
-                <option>Dear Madam</option>
-                <option>Dear Mr.</option>
-                <option>Dear Ms.</option>
-            </select>
+        <div>
+            <label for="date">Date</label>
+            <input type="date" id="date" name="address" placeholder="Address" >
         </div>
+        <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
 
-        <p class="contact"><label for="cName">Concerned Person's Last Name</label></p>
-        <input type="text" id="cName" name="address" placeholder="Last Name" >
+        <p class="contact"><label for="cName">Concerned Person's Full Name</label></p>
+        <input type="text" id="cName" name="address" placeholder="Full Name" >
 
         <p class="contact"><label for="cTitle">Concerned Person's Professional Title</label></p>
         <input type="text" id="cTitle" name="address" placeholder="Professional Title" >
 
-        <p class="contact"><label for="cOrg">Concerned Organization's Name</label></p>
-        <input type="text" id="cOrg" name="address" placeholder="Organization Name" >
-
-        <p class="contact"><label for="cAddress">Concerned Organization's Address</label></p>
-        <input type="text" id="cAddress" name="address" placeholder="Organization's Address" >
-        <hr style="border: 1px solid #A2AEBB; margin-right: 10%" />​
+        <p class="contact"><label for="subject">Subject</label></p>
+        <input type="text" id="subject" name="address" placeholder="Subject of Memorandum">
 
         <div class="form-group">
             <label for="cStart">Opening Statement</label>
@@ -113,19 +95,20 @@
                 <option>Yours Sincerely</option>
             </select>
         </div>
-        <button class="buttom" onclick="save_data_cl()" type="button" style="position: relative; float: right; margin-right: 10%">Save and Display Data</button><br><br>
+        <button class="buttom" onclick="save_data_memo()" type="button" style="position: relative; float: right; margin-right: 10%">Save and Display Data</button><br><br>
     </div>
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h5>Go Resume© 2017</h5>
-                </div>
-                <div class="col-sm-6 social-icons"><a href="https://www.facebook.com/Go-Resume-1813690295611919/" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-            </div>
-        </div>
-    </footer>
+
 </div>
+<footer class="site-footer">
+    <div class="container" style="padding-top: 60px">
+        <div class="row">
+            <div class="col-sm-6">
+                <h5>Go Resume© 2017</h5>
+            </div>
+            <div class="col-sm-6 social-icons"><a href="https://www.facebook.com/Go-Resume-1813690295611919/" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

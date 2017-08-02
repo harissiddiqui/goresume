@@ -68,7 +68,8 @@
                             };
                             console.log(data);
                             console.log(data.displayName)
-                         localStorage.setItem("username", data.displayName);
+                                localStorage.setItem("photoURL", data.photoURL);
+                                localStorage.setItem("username", data.displayName);
                                 localStorage.setItem("email", data.email);
                                 localStorage.setItem("uid", data.uid);
                                
@@ -128,6 +129,8 @@
              <div id="sign-in"></div> -->       
              <!--<div id="account-details"></div>-->
             <script>
+                var photo = localStorage.getItem("photoURL");
+            document.write("<img src=" + "'" + photo + "'" + "/>");
             document.write("<h1> Name: " + localStorage.getItem("username") + "</h1>");
             document.write("<h3> Email: " + localStorage.getItem("email") + "</h3>");
             document.write("<h3> ID: " + localStorage.getItem("uid") + "</h3>");
