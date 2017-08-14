@@ -98,7 +98,7 @@
     <!--<h1>Welcome to Go Resume</h1>-->
 <nav class="navbar navbar-inverse">
         <div class="container" style="font-family:Sansation Light">
-            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">⚡Go Resume</a>
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="index.html">⚡Go Resume</a>
             </div>
            
             <!--<div style="float:right" class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false"
@@ -130,11 +130,26 @@
              <!--<div id="account-details"></div>-->
             <script>
                 var photo = localStorage.getItem("photoURL");
+                var a = localStorage.getItem("username");
+                console.log(a);
+                if(a!=null)
+                {
+                    console.log('value is null');
+                        document.write("<img src=" + "'" + photo + "'" + "/>");
+            // document.write("<h1> Name: " + localStorage.getItem("newname") + "</h1>");
+
+            document.write("<h1> Name: " + "Harry" + "</h1>");
+            document.write("<h3> Email: " + localStorage.getItem("email") + "</h3>");
+            document.write("<h3> ID: " + localStorage.getItem("uid") + "</h3>");
+
+                }
+                else
+                {
             document.write("<img src=" + "'" + photo + "'" + "/>");
             document.write("<h1> Name: " + localStorage.getItem("username") + "</h1>");
             document.write("<h3> Email: " + localStorage.getItem("email") + "</h3>");
             document.write("<h3> ID: " + localStorage.getItem("uid") + "</h3>");
-            //document.write("asdasdasd");
+            }//document.write("asdasdasd");
             // document.write("<h3>" + localStorage.getItem("uid") + "</h3>");
         </script>
          <!--<div id="firebaseui-auth-container"></div>-->
@@ -161,7 +176,7 @@
                 <div class="col-md-6 col-md-offset-4 col-md-pull-3 get-it">
                     <h1 class="text-muted">Go Resume</h1>
                     <p>Create Unlimited Resumes, Explore Jobs, Publish your resumes, Share them on Social Media.</p>
-                    <p><a class="btn btn-primary btn-lg" role="button" href="../Create Resume/builder.html" target="_blank">Create Resume</a><a
+                    <p><a class="btn btn-primary btn-lg" role="button" href="/builder.html" target="_self">Create Resume</a><a
                             class="btn btn-success btn-lg" role="button" <base href="http://localhost:3000" target="_blank" />Explore
                         Jobs</a>
                     </p>
@@ -227,7 +242,6 @@ localStorage.setItem("username","");
 localStorage.setItem("email","");
 
 localStorage.setItem("uid","");
-console.log('heyyy')
             // document.write("<h1> Name: " + localStorage.getItem("username") + "</h1>");
             // document.write("<h3> Email: " + localStorage.getItem("email") + "</h3>");
             // document.write("<h3> ID: " + localStorage.getItem("uid") + "</h3>");

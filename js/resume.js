@@ -7,7 +7,7 @@ var eduArray = [];
 var workArray = [];
 var pSkillArray = [];
 var tSkillArray = [];
-var qualArray = [];
+var qualArray = []; //
 
 function addEdu() {
 
@@ -32,6 +32,15 @@ function addEdu() {
         $(this).val($(this).attr("data-default"));
     });
 
+}
+
+function showEdu() {
+    var html;
+    for (var i = 0; i < eduArray.length; i++) {
+        html+="<tr align='left'><td>"+eduArray[i].degree+"</td><td>"+eduArray[i].school+"</td><td>"+eduArray[i].date+"<td><button type='button' onclick='del.call(this, eduArray)'>Delete</button></td></tr> ";
+    }
+    html+="</table>";
+    document.getElementById("rmEdu").innerHTML = html;
 }
 
 function addWork() {
@@ -59,6 +68,15 @@ function addWork() {
     });
 }
 
+function showWork() {
+    var html;
+    for (var i = 0; i < workArray.length; i++) {
+        html+="<tr align='left'><td>"+workArray[i].position+"</td><td>"+workArray[i].organization+"</td><td>"+workArray[i].start+"</td><td>"+workArray[i].end+"<button type='button' onclick='del.call(this, workArray)'>Delete</button></td></tr> ";
+    }
+    html+="</table>";
+    document.getElementById("rmWork").innerHTML = html;
+}
+
 function addPSkill() {
 
     var iSkill = document.getElementById("pSkill").value;
@@ -76,6 +94,15 @@ function addPSkill() {
     $('#pSkillInput').find('input[type=text]').each(function(){
         $(this).val($(this).attr("data-default"));
     });
+}
+
+function showPSkill() {
+    var html;
+    for (var i = 0; i < pSkillArray.length; i++) {
+        html+="<tr align='left'><td>"+pSkillArray[i].skill+"<button type='button' onclick='del.call(this, pSkillArray)'>Delete</button></td></tr> ";
+    }
+    html+="</table>";
+    document.getElementById("rmPSkill").innerHTML = html;
 }
 
 function addTSkill() {
@@ -97,6 +124,15 @@ function addTSkill() {
     });
 }
 
+function showTSkill() {
+    var html;
+    for (var i = 0; i < tSkillArray.length; i++) {
+        html+="<tr align='left'><td>"+tSkillArray[i].skill+"<button type='button' onclick='del.call(this, tSkillArray)'>Delete</button></td></tr> ";
+    }
+    html+="</table>";
+    document.getElementById("rmTSkill").innerHTML = html;
+}
+
 function addQual() {
     console.log("addQual is working");
     var iQual = document.getElementById("qual").value;
@@ -114,12 +150,27 @@ function addQual() {
     $('#qualInput').find('input[type=text]').each(function(){
         $(this).val($(this).attr("data-default"));
     });
+
+
+}
+
+function showQual() {
+    var html;
+    for (var i = 0; i < qualArray.length; i++) {
+        html+="<tr align='left'><td>"+qualArray[i].qual+"<button type='button' onclick='del.call(this, qualArray)'>Delete</button></td></tr> ";
+    }
+    html+="</table>";
+    document.getElementById("rmQual").innerHTML = html;
+}
+
+function del(arr) {
+    arr.splice(arr.indexOf($(this).val()), 1);
+    $(this).parent().remove();
 }
 
 function selectTmp(template) {
-
     window.teeemp = template;
-
+    $('#tempSelectModal').modal('hide');
 }
 
 function snackbar(val) {
@@ -131,7 +182,10 @@ function snackbar(val) {
 
 function createCoverLetter() {
     window.open("localhost://3000", "_self");
+}
 
+function viewTemp(template) {
+    window.open(template);
 }
 
 function save_data(){
